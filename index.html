@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PreuSync | La Plataforma Educativa para Preuniversitarios en Cuba</title>
+  <meta name="description" content="PreuSync es la plataforma integral para preuniversitarios en Cuba: horario escolar dinámico, noticias, eventos, efemérides y comunidad estudiantil.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-sky-500/20">
+          P
+        </div>
+        <span class="font-bold text-xl tracking-tight text-white">PreuSync</span>
+        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-950 text-sky-400 border border-sky-800">v0.99.115 Beta</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#features" class="hover:text-sky-400 transition-colors">Características</a>
+        <a href="#schedule" class="hover:text-sky-400 transition-colors">Horario Escolar</a>
+        <a href="#community" class="hover:text-sky-400 transition-colors">Comunidad</a>
+        <a href="#about" class="hover:text-sky-400 transition-colors">Acerca de</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://preusync-admin.onrender.com" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700 transition-all">
+          <i data-lucide="shield" class="w-4 h-4 text-sky-400"></i>
+          Panel Admin
+        </a>
+        <a href="#download" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold shadow-lg shadow-sky-600/30 transition-all">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          Descargar APK
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center relative overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 left-1/3 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-950/80 border border-sky-800 text-sky-300 text-xs font-medium mb-6">
+      <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+      Especializado para Preuniversitarios en Cuba
+    </div>
+
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+      Sincroniza tu vida escolar con <span class="bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">PreuSync</span>
+    </h1>
+
+    <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+      La plataforma integral diseñada para estudiantes y profesores. Horario escolar dinámico en tiempo real, noticias destacadas, eventos institucionales, efemérides y comunidad estudiantil.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#download" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-bold text-base shadow-xl shadow-sky-500/25 transition-all">
+        <i data-lucide="download" class="w-5 h-5"></i>
+        Descargar APK para Android
+      </a>
+      <a href="https://preusync-admin.onrender.com" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-base border border-slate-700 transition-all">
+        <i data-lucide="layout-dashboard" class="w-5 h-5 text-sky-400"></i>
+        Acceso Panel Web Admin
+      </a>
+    </div>
+
+    <div class="mt-12 flex items-center justify-center gap-8 text-slate-500 text-xs sm:text-sm font-medium">
+      <div class="flex items-center gap-2">
+        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+        <span>100% Gratuito y Libre</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+        <span>Sin Anuncios Abusivos</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+        <span>Código Abierto AGPLv3</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="features" class="py-20 bg-slate-900/50 border-y border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-white tracking-tight">Todo lo que necesitas en una sola app</h2>
+        <p class="mt-3 text-sm text-slate-400">Diseñado específicamente para responder a las necesidades organizativas de los institutos preuniversitarios.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="calendar" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Horario Escolar Inteligente</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Matriz oficial de 16 turnos con resaltado automático de la clase activa según la hora del reloj. Sincronización dinámica desde la base de datos.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="message-square" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Comunidad y Debates</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Publica dudas académicas, comparte sugerencias, vota y comenta con tus compañeros en un espacio colaborativo moderado.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="newspaper" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Noticias y Agenda Escolar</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Mantente al día con las noticias destacadas de la dirección escolar, eventos extracurriculares y convocatorias oficiales.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="bookmark" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Efemérides Históricas</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Consulta los acontecimientos históricos relevantes del día en la historia de Cuba y del mundo con fechas organizadas.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="map-pin" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Jerarquía Nacional</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Estructura organizada por Provincias, Municipios y Preuniversitarios (como IPU Ursinio Rojas Santiesteban y IPVCE Mártires de Humboldt).
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-rose-500/50 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="wifi-off" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Modo Ahorro de Datos</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Optimizado para redes móviles inestables con ahorro de datos en caché local cifrada para un consumo mínimo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-tr from-sky-950 via-slate-900 to-indigo-950 border border-sky-800/60 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
+      <div class="space-y-4 max-w-2xl">
+        <span class="inline-block px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 font-bold text-xs uppercase tracking-wider">Última Versión Lanzada</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Descarga PreuSync APK para Android</h2>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          Compatible con cualquier dispositivo móvil desde Android 7.0 (API 24) en adelante. Instalación rápida sin dependencias pesadas.
+        </p>
+        <div class="flex flex-wrap gap-4 text-xs font-semibold text-slate-400 pt-2">
+          <span>• Versión: v0.99.115 Beta</span>
+          <span>• Tamaño: ~18.5 MB</span>
+          <span>• Licencia: AGPLv3</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row lg:flex-col gap-4 w-full sm:w-auto flex-shrink-0">
+        <a href="https://github.com/JiroxDEV/preusync-android/releases/latest" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-base transition-all shadow-lg shadow-sky-500/30">
+          <i data-lucide="download" class="w-5 h-5"></i>
+          Descargar APK Oficial
+        </a>
+        <a href="https://github.com/JiroxDEV/preusync-android" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 transition-all">
+          <i data-lucide="github" class="w-5 h-5"></i>
+          Ver Código en GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 py-12 text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white font-bold text-sm">P</div>
+        <span class="font-bold text-sm text-slate-300">PreuSync</span>
+        <span>© 2026 BinaryQva / JiroxDEV</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/JiroxDEV" target="_blank" class="hover:text-slate-300 transition-colors">GitHub</a>
+        <a href="https://preusync-admin.onrender.com" target="_blank" class="hover:text-slate-300 transition-colors">Panel Admin Web</a>
+        <span>Licencia GNU AGPLv3</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) window.lucide.createIcons();
+  </script>
+</body>
+</html>
