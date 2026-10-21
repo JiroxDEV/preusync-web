@@ -1,6 +1,6 @@
 {
-  "name": "BinaryQva",
-  "short_name": "BinaryQva",
+  "name": "PreuSync",
+  "short_name": "PreuSync",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#13003e",
-  "background_color": "#13003e",
+  "theme_color": "#04001e",
+  "background_color": "#04001e",
   "display": "standalone"
 }
