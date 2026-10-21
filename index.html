@@ -3,8 +3,8 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>PreuSync™ — La Plataforma para Preuniversitarios en Cuba</title>
-     <meta name="description" content="PreuSync™ es la plataforma integral para preuniversitarios en Cuba: horario escolar dinámico, noticias, eventos, efemérides y comunidad estudiantil.">
+     <title>PreuSync™ — La Plataforma Educativa para Preuniversitarios en Cuba</title>
+     <meta name="description" content="PreuSync™ es la plataforma integral para preuniversitarios en Cuba: horario escolar dinámico, noticias, eventos, efemérides y comunidad estudiantil. Proyecto de BinaryQva™ desarrollado por JiroxDEV.">
      <script>
           (function () {
                const savedTheme = localStorage.getItem('theme');
@@ -18,17 +18,17 @@
      </script>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="css/style.css">
-     <link rel="icon" type="image/svg+xml" href="img/logo-android.svg"/>
-     <link rel="apple-touch-icon" href="img/logo-android.svg"/>
+     <link rel="icon" type="image/png" href="img/splash_logo.png"/>
+     <link rel="apple-touch-icon" href="img/splash_logo.png"/>
      <meta name="apple-mobile-web-app-title" content="PreuSync"/>
 </head>
 <body>
      <header id="header">
           <div class="nav-container">
-               <a href="#" class="brand" style="display: flex; items-center: center; gap: 12px; text-decoration: none;">
-                    <img src="img/logo-android.svg" alt="PreuSync Android Foreground Vector Logo" style="width: 36px; height: 36px; border-radius: 8px;">
+               <a href="#" class="brand" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                    <img src="img/splash_logo.png" alt="PreuSync Logo" style="width: 38px; height: 38px; border-radius: 8px;">
                     <span style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--text-color, #ffffff);">PreuSync™</span>
                </a>
                <div class="nav-actions">
@@ -42,7 +42,8 @@
                </div>
                <ul class="nav-links" id="nav-links">
                     <li><a href="#home">Inicio</a></li>
-                    <li><a href="#features">Características</a></li>
+                    <li><a href="#objectives">Objetivos</a></li>
+                    <li><a href="#features">Módulos</a></li>
                     <li><a href="#download">Descargar APK</a></li>
                     <li><a href="#admin">Panel Admin</a></li>
                     <li><a href="#about">Acerca de</a></li>
@@ -56,75 +57,103 @@
                <span id="typing-text"></span><span class="cursor"></span>
           </div>
           <div class="btn-group fade-in">
-               <a href="#download" class="btn btn-primary">Descargar APK Android</a>
-               <a href="https://preusync-admin.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Acceso Panel Admin</a>
+               <a href="#download" class="btn btn-primary">
+                    <svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Descargar APK Android
+               </a>
+               <a href="https://preusync-admin.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <svg class="icon"><use href="img/icons.svg#icon-globe"></use></svg> Acceso Panel Admin
+               </a>
           </div>
      </section>
 
+     <!-- SECCIÓN OBJETIVOS DEL PROYECTO -->
+     <section class="section-container" id="objectives">
+          <h2 class="section-title fade-in">Objetivos del Proyecto</h2>
+          <div class="text-container fade-in">
+               <p class="about-text">
+                    <strong>PreuSync™</strong> es una plataforma educativa integral concebida para digitalizar, organizar y conectar a los institutos preuniversitarios de Cuba (tanto Institutos Preuniversitarios Urbanos - IPU, como Institutos Preuniversitarios Vocacionales de Ciencias Exactas - IPVCE).
+               </p>
+               <p class="mision-text">
+                    Su objetivo fundamental es eliminar las barreras de comunicación e información entre estudiantes, docentes y tutores, proporcionando acceso instantáneo a horarios escolares, avisos institucionales, debates académicos y efemérides en una interfaz ligera, accesible e independiente.
+               </p>
+          </div>
+     </section>
+
+     <!-- SECCIÓN MÓDULOS Y FUNCIONES -->
      <section class="section-container" id="features">
-          <h2 class="section-title fade-in">Características Principales</h2>
+          <h2 class="section-title fade-in">Módulos y Funcionalidades</h2>
           <div class="grid">
                <div class="card fade-in">
-                    <h3>📅 Horario Escolar Inteligente <span class="badge badge-beta">En Vivo</span></h3>
-                    <p>Matriz oficial de 16 turnos con resaltado automático de la clase activa según el reloj. Sincronización dinámica desde la base de datos.</p>
+                    <h3>Horario Escolar Inteligente <span class="badge badge-beta">16 Turnos</span></h3>
+                    <p>Matriz oficial ajustada a los tiempos de la jornada preuniversitaria (Conversación Inicial, 8 turnos de clase, descansos, merienda y almuerzo). Resalta automáticamente el turno activo según la hora actual.</p>
                </div>
 
                <div class="card fade-in">
-                    <h3>💬 Comunidad y Debates <span class="badge">Estudiantil</span></h3>
-                    <p>Publica dudas académicas, comparte sugerencias, vota y comenta con tus compañeros en un espacio colaborativo moderado.</p>
+                    <h3>Comunidad y Debates Estudiantiles <span class="badge">Colaborativo</span></h3>
+                    <p>Espacio donde los estudiantes pueden publicar preguntas de asignaturas, debatir contenidos académicos, votar respuestas y colaborar de forma respetuosa.</p>
                </div>
 
                <div class="card fade-in">
-                    <h3>📰 Noticias y Agenda Escolar</h3>
-                    <p>Mantente al día con las noticias destacadas de la dirección escolar, eventos extracurriculares y convocatorias oficiales.</p>
+                    <h3>Noticias e Información Institucional</h3>
+                    <p>Canal directo de boletines, comunicados de la dirección escolar y avisos docentes cargados remotamente desde la base de datos.</p>
                </div>
 
                <div class="card fade-in">
-                    <h3>📜 Efemérides Históricas</h3>
-                    <p>Consulta los acontecimientos históricos relevantes del día en la historia de Cuba y del mundo con fechas organizadas.</p>
+                    <h3>Agenda de Eventos Escolares y Externos</h3>
+                    <p>Calendario cronológico de actividades culturales, deportivas, exámenes y convocatorias nacionales.</p>
                </div>
 
                <div class="card fade-in">
-                    <h3>🏫 Jerarquía Nacional</h3>
-                    <p>Estructura organizada por Provincias, Municipios y Preuniversitarios (como IPU Ursinio Rojas Santiesteban).</p>
+                    <h3>Efemérides Históricas Diarias</h3>
+                    <p>Registro histórico detallado con los hechos más relevantes acontecidos cada día en la historia de Cuba y del mundo.</p>
                </div>
 
                <div class="card fade-in">
-                    <h3>🚀 Modo Ahorro de Datos</h3>
-                    <p>Optimizado para redes móviles inestables con ahorro de datos en caché local cifrada para un consumo mínimo.</p>
+                    <h3>Jerarquía Territorial y Ahorro de Datos</h3>
+                    <p>Estructurado por Provincias, Municipios y Preuniversitarios (como IPU Ursinio Rojas Santiesteban). Diseñado con cifrado offline y mínimo consumo de datos móviles.</p>
                </div>
           </div>
      </section>
 
+     <!-- SECCIÓN DESCARGA DE APK -->
      <section class="section-container" id="download">
           <div class="collaborate-box fade-in" style="text-align: left;">
-               <h2>Descargar PreuSync™ APK para Android</h2>
-               <p>Compatible con cualquier dispositivo móvil desde Android 7.0 (API 24) en adelante. Instalación rápida sin dependencias pesadas.</p>
+               <h2>Descargar PreuSync™ para Android</h2>
+               <p>Aplicación nativa optimizada para funcionar con fluidez en dispositivos móviles desde Android 7.0 (API 24) en adelante.</p>
                <div class="collaborate-tags">
-                    <span>• Versión: v0.99.115 Beta</span>
-                    <span>• Tamaño: ~18.5 MB</span>
-                    <span>• Licencia: AGPLv3</span>
+                    <span><svg class="icon"><use href="img/icons.svg#icon-bulb"></use></svg> Versión: v0.99.115 Beta</span>
+                    <span><svg class="icon"><use href="img/icons.svg#icon-globe"></use></svg> Tamaño: ~18.5 MB</span>
+                    <span><svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Licencia: GNU AGPLv3</span>
                </div>
                <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
-                    <a href="https://github.com/JiroxDEV/preusync-android/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Descargar APK Oficial</a>
-                    <a href="https://github.com/JiroxDEV/preusync-android" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Ver Código en GitHub</a>
+                    <a href="https://github.com/JiroxDEV/preusync-android/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                         Descargar APK Oficial
+                    </a>
+                    <a href="https://github.com/JiroxDEV/preusync-android" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                         Ver Código en GitHub
+                    </a>
                </div>
           </div>
      </section>
 
+     <!-- SECCIÓN SOBRE EL PROYECTO Y MARCO LEGAL -->
      <section class="section-container" id="about">
           <h2 class="section-title fade-in">Sobre el Proyecto</h2>
           <div class="text-container fade-in">
                <p class="about-text">
-                    <strong>PreuSync™</strong> es el primer proyecto de <strong>BinaryQva™</strong>, desarrollado por <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong>. Nace con la misión de proporcionar una plataforma moderna, gratuita y sin publicidad que facilite la organización académica de miles de estudiantes y profesores preuniversitarios en Cuba.
+                    <strong>PreuSync™</strong> es un proyecto libre creado por <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong> dentro del ecosistema de <strong>BinaryQva™</strong>. Todo el código fuente está distribuido bajo la Licencia **GNU Affero General Public License v3 (AGPLv3)** para garantizar la transparencia y la soberanía tecnológica.
                </p>
           </div>
      </section>
 
      <footer>
           <div class="footer-content">
-               <p class="footer-love"> Hecho con código abierto desde Cuba para el mundo. </p>
-               <p class="footer-legal"> &copy; 2026 <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong>. PreuSync™ es un proyecto de BinaryQva™. </p>
+               <p class="footer-love">
+                    Hecho con código abierto desde Cuba para el mundo.
+               </p>
+               <p class="footer-legal">
+                    &copy; 2026 <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong>. PreuSync™ es un proyecto de BinaryQva™.
+               </p>
                <div class="footer-links">
                     <a href="https://preusync-admin.onrender.com" target="_blank" rel="noopener noreferrer">Panel Admin</a>
                     <a href="mailto:jiroxdev@preusync.com">Contacto</a>
