@@ -1,19 +1,20 @@
 /* =========================================
    VARIABLES Y ESTILOS GLOBALES - PreuSync™
-   Colores Principales: #66D3FF (Ciano Eléctrico) y #004D63 (Azul Marino)
+   Colores Principales: #66D3FF (Celeste Claro) a #004D63 (Celeste Oscuro)
    ========================================= */
 :root {
-    --bg-main: #001722;
-    --bg-panel: rgba(0, 77, 99, 0.35);
-    --bg-panel-hover: rgba(0, 77, 99, 0.6);
-    --header-bg: rgba(0, 23, 34, 0.85);
-    --footer-bg: rgba(0, 23, 34, 0.9);
+    --bg-main: #00121a;
+    --bg-panel: rgba(0, 77, 99, 0.3);
+    --bg-panel-hover: rgba(0, 77, 99, 0.55);
+    --header-bg: rgba(0, 18, 26, 0.9);
+    --footer-bg: rgba(0, 18, 26, 0.95);
     
     --text-main: #f0fdfa;
     --text-muted: #94a3b8;
     
-    --brand-magenta: #004D63;
-    --brand-blue: #66D3FF;
+    --brand-cyan: #66D3FF;  /* Celeste Claro */
+    --brand-navy: #004D63;  /* Celeste Oscuro */
+    --brand-blue: #0284c7;
     
     --border-color: rgba(102, 211, 255, 0.25);
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -26,14 +27,14 @@
     --bg-main: #f0f9ff;
     --bg-panel: #ffffff; 
     --bg-panel-hover: #e0f2fe;
-    --header-bg: rgba(240, 249, 255, 0.85);
+    --header-bg: rgba(240, 249, 255, 0.9);
     --footer-bg: #e0f2fe;
     
     --text-main: #0c4a6e;
     --text-muted: #0369a1;
     
-    --brand-magenta: #004D63;
-    --brand-blue: #0284c7;
+    --brand-cyan: #0284c7;
+    --brand-navy: #004D63;
     
     --border-color: #bae6fd;
 }
@@ -64,7 +65,7 @@ body {
 }
 
 /* =========================================
-   ICONOS SVG (Control de tamaño base)
+   ICONOS SVG
    ========================================= */
 .icon {
     display: inline-block;
@@ -130,7 +131,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: var(--text-main);
+    color: var(--brand-cyan);
 }
 
 .nav-actions {
@@ -155,7 +156,7 @@ header {
 
 .theme-toggle:hover {
     background-color: var(--bg-panel-hover);
-    border-color: var(--brand-blue);
+    border-color: var(--brand-cyan);
     transform: scale(1.05);
 }
 
@@ -180,7 +181,7 @@ header {
 .hamburger svg { width: 28px; height: 28px; }
 
 /* =========================================
-   HOME SECTION
+   HOME SECTION (DEGRADADO DE CELESTE CLARO A OSCURO)
    ========================================= */
 .home {
     min-height: 100vh;
@@ -202,12 +203,12 @@ header {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(102, 211, 255, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(102, 211, 255, 0.2) 0%, rgba(0, 77, 99, 0.2) 50%, transparent 70%);
     z-index: -1;
     pointer-events: none;
 }
 [data-theme="light"] .home::before {
-    background: radial-gradient(circle, rgba(2, 132, 199, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.15) 0%, transparent 70%);
 }
 
 .home h1 {
@@ -219,8 +220,9 @@ header {
     margin-bottom: 24px;
 }
 
+/* DEGRADADO OFICIAL: DE CELESTE CLARO (#66D3FF) A CELESTE OSCURO (#004D63) */
 .gradient-text {
-    background: linear-gradient(90deg, var(--brand-magenta), var(--brand-blue));
+    background: linear-gradient(135deg, #66D3FF 0%, #38BDF8 40%, #0088B3 70%, #004D63 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -229,17 +231,16 @@ header {
 .home-typing {
     font-family: var(--font-heading);
     font-size: clamp(1.1rem, 2vw, 1.4rem);
-    color: var(--brand-blue);
+    color: var(--brand-cyan);
     height: 40px;
     margin-bottom: 40px;
 }
-[data-theme="dark"] .home-typing { color: #66D3FF; }
 
 .cursor {
     display: inline-block;
     width: 10px;
     height: 1.2em;
-    background-color: var(--brand-blue);
+    background-color: var(--brand-cyan);
     margin-left: 6px;
     animation: blink 1s step-end infinite;
     vertical-align: bottom;
@@ -258,7 +259,7 @@ header {
     display: inline-block;
     padding: 14px 32px;
     border-radius: 6px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.95rem;
     font-family: var(--font-heading);
     text-decoration: none;
@@ -269,13 +270,14 @@ header {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--brand-magenta), var(--brand-blue));
-    color: white;
-    box-shadow: 0 4px 15px rgba(102, 211, 255, 0.3);
+    background: linear-gradient(135deg, #66D3FF 0%, #0284c7 100%);
+    color: #00121a;
+    border: 1px solid #66D3FF;
+    box-shadow: 0 4px 15px rgba(102, 211, 255, 0.35);
 }
 
 .btn-primary:hover {
-    box-shadow: 0 6px 20px rgba(102, 211, 255, 0.5);
+    box-shadow: 0 6px 22px rgba(102, 211, 255, 0.55);
     transform: translateY(-2px);
 }
 
@@ -287,7 +289,7 @@ header {
 
 .btn-secondary:hover {
     background-color: var(--bg-panel-hover);
-    border-color: var(--brand-blue);
+    border-color: var(--brand-cyan);
 }
 
 /* =========================================
@@ -319,7 +321,7 @@ header {
     bottom: -8px;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--brand-magenta), var(--brand-blue));
+    background: linear-gradient(90deg, #66D3FF, #004D63);
     border-radius: 2px;
 }
 
@@ -346,7 +348,7 @@ header {
 
 .card:hover {
     background-color: var(--bg-panel-hover);
-    border-color: var(--brand-blue);
+    border-color: var(--brand-cyan);
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
@@ -376,7 +378,7 @@ header {
     font-family: var(--font-heading);
     font-size: 0.75rem;
     background: rgba(102, 211, 255, 0.15);
-    color: var(--brand-blue);
+    color: var(--brand-cyan);
     padding: 4px 10px;
     border-radius: 4px;
     font-weight: 700;
@@ -392,7 +394,7 @@ header {
 .btn-card {
     background: none;
     border: none;
-    color: var(--brand-blue);
+    color: var(--brand-cyan);
     font-family: var(--font-heading);
     font-weight: 700;
     cursor: pointer;
@@ -406,7 +408,7 @@ header {
     width: fit-content;
 }
 
-.btn-card:hover { color: var(--brand-blue); }
+.btn-card:hover { color: var(--brand-cyan); }
 
 .coming-soon-text {
     color: var(--text-muted);
@@ -428,7 +430,7 @@ header {
     background: var(--bg-panel);
     padding: 24px;
     border-radius: 8px;
-    border-left: 4px solid var(--brand-blue);
+    border-left: 4px solid var(--brand-cyan);
 }
 
 .philo-item h3 {
@@ -507,19 +509,19 @@ header {
 
 .collaborate-tags span:hover {
     background: var(--bg-panel-hover);
-    border-color: var(--brand-blue);
+    border-color: var(--brand-cyan);
     transform: translateY(-2px);
 }
 
 .collaborate-tags svg {
     width: 18px;
     height: 18px;
-    color: var(--brand-blue);
+    color: var(--brand-cyan);
     transition: var(--transition);
 }
 
 .collaborate-tags span:hover svg {
-    color: var(--brand-blue);
+    color: var(--brand-cyan);
 }
 
 .collaborate-action {
@@ -573,13 +575,13 @@ footer {
 }
 
 .footer-links a {
-    color: var(--text-muted);
+    color: var(--brand-cyan);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: var(--text-main);
+    text-decoration: underline;
 }
 
 /* =========================================
