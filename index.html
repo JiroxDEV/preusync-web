@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>PreuSync™ — La Plataforma Educativa para Preuniversitarios en Cuba</title>
-     <meta name="description" content="PreuSync™ es la plataforma integral para preuniversitarios en Cuba: horario escolar dinámico, noticias, eventos, efemérides y comunidad estudiantil. Proyecto de BinaryQva™ desarrollado por JiroxDEV.">
+     <meta name="description" content="PreuSync™ es la plataforma integral para preuniversitarios en Cuba: horario escolar dinámico, visor Markdown con LaTeX, comunidad, noticias, eventos, efemérides y resiliencia offline. Proyecto de BinaryQva™ desarrollado por JiroxDEV.">
      <script>
           (function () {
                const savedTheme = localStorage.getItem('theme');
@@ -18,7 +18,7 @@
      </script>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="css/style.css">
      <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96"/>
      <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg"/>
@@ -46,8 +46,8 @@
                     <li><a href="#home">Inicio</a></li>
                     <li><a href="#objectives">Objetivos</a></li>
                     <li><a href="#features">Módulos</a></li>
+                    <li><a href="#tech-highlights">Arquitectura</a></li>
                     <li><a href="#download">Descargar APK</a></li>
-                    <li><a href="#admin">Panel Admin</a></li>
                     <li><a href="#about">Acerca de</a></li>
                </ul>
           </div>
@@ -76,23 +76,23 @@
                     <strong>PreuSync™</strong> es una plataforma educativa integral concebida para digitalizar, organizar y conectar a los institutos preuniversitarios de Cuba (tanto Institutos Preuniversitarios Urbanos - IPU, como Institutos Preuniversitarios Vocacionales de Ciencias Exactas - IPVCE).
                </p>
                <p class="mision-text">
-                    Su objetivo fundamental es eliminar las barreras de comunicación e información entre estudiantes, docentes y tutores, proporcionando acceso instantáneo a horarios escolares, avisos institucionales, debates académicos y efemérides en una interfaz ligera, accesible e independiente.
+                    Su objetivo fundamental es eliminar las barreras de comunicación e información entre estudiantes, docentes y tutores, proporcionando acceso instantáneo a horarios escolares, avisos institucionales, debates académicos con fórmulas matemáticas y efemérides en una aplicación ligera, accesible e independiente.
                </p>
           </div>
      </section>
 
      <!-- SECCIÓN MÓDULOS Y FUNCIONES -->
      <section class="section-container" id="features">
-          <h2 class="section-title fade-in">Módulos y Funcionalidades</h2>
+          <h2 class="section-title fade-in">Módulos y Funcionalidades Principales</h2>
           <div class="grid">
                <div class="card fade-in">
                     <h3>Horario Escolar en Tiempo Real</h3>
-                    <p>Sincronización de clases por grupos y asignaturas con detección automática del turno activo según el reloj del teléfono. Incluye selector de grupo y pestaña con la leyenda oficial de asignaturas.</p>
+                    <p>Sincronización de clases por grupos con detección automática del turno activo según el reloj del dispositivo. Incluye selector de grupo y pestaña con la leyenda oficial de asignaturas (M, LL, HC, H, B, CP, DC, IF, I, Q, EF, F, G, DR).</p>
                </div>
 
                <div class="card fade-in">
-                    <h3>Comunidad y Debates Estudiantiles</h3>
-                    <p>Espacio colaborativo donde los estudiantes pueden publicar preguntas de asignaturas, debatir contenidos académicos, votar respuestas y colaborar de forma respetuosa.</p>
+                    <h3>Comunidad y Visor LaTeX / Markdown</h3>
+                    <p>Espacio colaborativo donde los estudiantes pueden publicar consultas de asignaturas con soporte para fórmulas matemáticas LaTeX (JLatexMath) y resaltado de código sintáctico Prism4j.</p>
                </div>
 
                <div class="card fade-in">
@@ -101,8 +101,8 @@
                </div>
 
                <div class="card fade-in">
-                    <h3>Agenda de Eventos y Convocatorias</h3>
-                    <p>Calendario de actividades culturales, deportivas, exámenes de ingreso y convocatorias nacionales organizadas por fechas.</p>
+                    <h3>Agenda de Eventos y Recordatorios</h3>
+                    <p>Calendario cronológico de actividades culturales, exámenes de ingreso y alertas personalizadas programadas para clases y convocatorias.</p>
                </div>
 
                <div class="card fade-in">
@@ -112,7 +112,28 @@
 
                <div class="card fade-in">
                     <h3>Estructura Territorial y Ahorro de Datos</h3>
-                    <p>Organizado por Provincias, Municipios e Institutos (como IPU Ursinio Rojas Santiesteban). Diseñado con cifrado local seguro (AES-GCM) y mínimo consumo de datos móviles.</p>
+                    <p>Estructurado por Provincias, Municipios e Institutos (como IPU Ursinio Rojas Santiesteban). Diseñado con cifrado local seguro (AES-GCM/PBKDF2) y mínimo consumo de datos móviles (2G/3G/4G).</p>
+               </div>
+          </div>
+     </section>
+
+     <!-- SECCIÓN DESTACADOS ARQUITECTURA TÉCNICA -->
+     <section class="section-container" id="tech-highlights">
+          <h2 class="section-title fade-in">Arquitectura e Ingeniería Nativa</h2>
+          <div class="grid">
+               <div class="card fade-in">
+                    <h3>Conmutación de Red OkHttp Cluster</h3>
+                    <p>Interceptor Failover que conmuta automáticamente entre los Nodos del Cluster en Render en menos de 3.5 segundos en caso de interrupciones de red.</p>
+               </div>
+
+               <div class="card fade-in">
+                    <h3>Cifrado de Caché Local Criptográfico</h3>
+                    <p>Almacenamiento seguro en el dispositivo utilizando cifrado AES-GCM con salt aleatorio derivado por dispositivo para máxima privacidad.</p>
+               </div>
+
+               <div class="card fade-in">
+                    <h3>Diagnóstico de Errores e Integración</h3>
+                    <p>Consola interna de logs (AppLogger) con buffer circular y reporte automático de fallos integrado con GitHub API.</p>
                </div>
           </div>
      </section>
