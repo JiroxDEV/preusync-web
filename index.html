@@ -18,14 +18,14 @@
      </script>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="css/style.css">
      <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96"/>
      <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg"/>
      <link rel="shortcut icon" href="favicon/favicon.ico"/>
      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/>
-     <link rel="manifest" href="favicon/site.webmanifest"/>
      <meta name="apple-mobile-web-app-title" content="PreuSync"/>
+     <link rel="manifest" href="favicon/site.webmanifest"/>
 </head>
 <body>
      <header id="header">
@@ -60,15 +60,14 @@
           </div>
           <div class="btn-group fade-in">
                <a href="#download" class="btn btn-primary">
-                    <svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Descargar APK Android
+                    <svg class="icon"><use href="img/icons.svg#icon-download"></use></svg> Descargar APK Android
                </a>
                <a href="https://preusync-admin.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    <svg class="icon"><use href="img/icons.svg#icon-globe"></use></svg> Acceso Panel Admin
+                    <svg class="icon"><use href="img/icons.svg#icon-shield"></use></svg> Acceso Panel Admin
                </a>
           </div>
      </section>
 
-     <!-- SECCIÓN OBJETIVOS DEL PROYECTO -->
      <section class="section-container" id="objectives">
           <h2 class="section-title fade-in">Objetivos del Proyecto</h2>
           <div class="text-container fade-in">
@@ -81,7 +80,6 @@
           </div>
      </section>
 
-     <!-- SECCIÓN MÓDULOS Y FUNCIONES -->
      <section class="section-container" id="features">
           <h2 class="section-title fade-in">Módulos y Funcionalidades</h2>
           <div class="grid">
@@ -117,7 +115,33 @@
           </div>
      </section>
 
-     <!-- SECCIÓN DESCARGA DE APK -->
+     <section class="section-container" id="philo">
+          <h2 class="section-title fade-in">Nuestra Filosofía</h2>
+          <div class="philo-grid fade-in">
+               <div class="philo-item">
+                    <h3 style="display: inline-flex; align-items: center; gap: 8px;">
+                         <svg class="icon" style="display: inline-block; vertical-align: middle;"><use href="img/icons.svg#icon-lock"></use></svg>
+                         Privacidad por Diseño
+                    </h3>
+                    <p>Tus datos son tuyos. Construimos herramientas donde la seguridad y el cifrado no son un extra, sino son una base.</p>
+               </div>
+               <div class="philo-item">
+                    <h3 style="display: inline-flex; align-items: center; gap: 8px;">
+                         <svg class="icon" style="display: inline-block; vertical-align: middle;"><use href="img/icons.svg#icon-flag"></use></svg>
+                         Soberanía Tecnológica
+                    </h3>
+                    <p>Creemos en la independencia digital. Buscamos que las personas y las instituciones no dependan de los grandes monopolios.</p>
+               </div>
+               <div class="philo-item">
+                    <h3 style="display: inline-flex; align-items: center; gap: 8px;">
+                         <svg class="icon" style="display: inline-block; vertical-align: middle;"><use href="img/icons.svg#icon-globe"></use></svg>
+                         Acceso Universal
+                    </h3>
+                    <p>Optimizado para funcionar donde otros fallan. Diseñamos pensando en conexiones lentas y recursos de hardware limitados.</p>
+               </div>
+          </div>
+     </section>
+
      <section class="section-container" id="download">
           <div class="collaborate-box fade-in" style="text-align: left;">
                <h2>Descargar PreuSync™ para Android</h2>
@@ -129,21 +153,20 @@
                </div>
                <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="https://github.com/JiroxDEV/preusync-android/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                         Descargar APK Oficial
+                         <svg class="icon"><use href="img/icons.svg#icon-download"></use></svg> Descargar APK Oficial
                     </a>
                     <a href="https://github.com/JiroxDEV/preusync-android" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                         Ver Código en GitHub
+                         <svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Ver Código en GitHub
                     </a>
                </div>
           </div>
      </section>
 
-     <!-- SECCIÓN SOBRE EL PROYECTO Y MARCO LEGAL -->
      <section class="section-container" id="about">
           <h2 class="section-title fade-in">Sobre el Proyecto</h2>
           <div class="text-container fade-in">
                <p class="about-text">
-                    <strong>PreuSync™</strong> es un proyecto libre creado por <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong> dentro del ecosistema de <strong>BinaryQva™</strong>. Todo el código fuente está distribuido bajo la Licencia **GNU Affero General Public License v3 (AGPLv3)** para garantizar la transparencia y la soberanía tecnológica.
+                    <strong>PreuSync™</strong> es un proyecto de código abierto desarrollado por <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong> como el primer proyecto principal del estudio e iniciativa <strong>BinaryQva™</strong>.
                </p>
           </div>
      </section>
@@ -151,7 +174,7 @@
      <footer>
           <div class="footer-content">
                <p class="footer-love">
-                    Hecho con código abierto desde Cuba para el mundo.
+                    Hecho con <svg class="icon heart-icon"><use href="img/icons.svg#icon-heart"></use></svg> y código abierto desde Cuba para el mundo.
                </p>
                <p class="footer-legal">
                     &copy; 2026 <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong>. PreuSync™ es un proyecto de BinaryQva™.
